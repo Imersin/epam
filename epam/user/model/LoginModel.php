@@ -18,7 +18,7 @@ class LoginModel
             return 2;
         }
         $aResult = $aResult[0];
-        if (true || password_verify($sPassword, $aResult['password'])) {
+        if (password_verify($sPassword, $aResult['password'])) {
             $_SESSION['user_id'] = $aResult['id'];
             $_SESSION['role_id'] = $aResult['role_id'];
             $_SESSION['fullname'] = $aResult['fullname'];
